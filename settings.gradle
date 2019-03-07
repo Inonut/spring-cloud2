@@ -1,2 +1,5 @@
 rootProject.name = 'spring-cloud2'
 
+include 'config'
+include 'registry'
+
