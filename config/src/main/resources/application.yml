@@ -13,7 +13,7 @@ spring:
       password: CONFIG_SERVICE_PASSWORD
 
   application:
-    name: configserver
+    name: config-server
 
 
 server:

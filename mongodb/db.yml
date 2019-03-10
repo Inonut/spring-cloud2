@@ -3,6 +3,8 @@ services:
   mongodb:
     image: mongo
     restart: always
+    ports:
+      - 27017:27017
     environment:
       MONGO_INITDB_ROOT_USERNAME: user
       MONGO_INITDB_ROOT_PASSWORD: MONGODB_PASSWORD
@@ -11,6 +13,7 @@ services:
       - './initDB:/docker-entrypoint-initdb.d'
       - './data/db:/data/db'
       - './data/configdb:/data/configdb'
+#    entrypoint: 'mongod --bind_ip_all'
 
   mongo-express:
     image: mongo-express
